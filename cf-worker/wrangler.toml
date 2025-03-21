@@ -1,0 +1,15 @@
+name = "comments-worker"
+main = "build/worker/shim.mjs"
+compatibility_date = "2025-03-21"
+
+routes = [{ pattern = "demo.comments.rs/*", zone_name = "comments.rs" }]
+
+workers_dev = false
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "comments_rs_demo_db"
+database_id = "324fc1f3-4fbf-4bbc-a3f8-18c239ae1702"

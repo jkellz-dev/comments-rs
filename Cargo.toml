@@ -1,14 +1,3 @@
-[package]
-name = "comments-rs"
-version = "0.0.0"
-edition = "2021"
-
-description = "A tool for handling comments on webpages"
-documentation = "https://docs.rs/comments-rs"
-homepage = "https://comments.rs"
-keywords = ["comments"]
-license = "MIT OR Apache-2.0"
-readme = "README.md"
-repository = "https://github.com/jkellz-dev/comments-rs"
-
-[dependencies]
+[workspace]
+members = ["http", "cf-worker", "service"]
+resolver = "3"
